@@ -27,9 +27,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/*
 ol, ul {
 	list-style: none;
-}
+}*/
 blockquote, q {
 	quotes: none;
 }
@@ -55,9 +56,13 @@ h1,h2,h3{
 	font-weight:bold;
 }
 h2{
-	margin-top:10px;
+	margin-top:20px;
+	margin-bottom:15px;
+	font-size:20px;
 }
-
+h3{
+	margin:10px 0;
+}
 header{
 	background-color:blue;
 	height:70px;
@@ -75,11 +80,14 @@ header h1{
 	margin-top:15px;
 	margin-left:20px;
 }
+body{
+	background-color:#f3f3f3;
+}
 #sectionPrincipale{
 	width:60%;
 	margin-left:15%;
-	background-color:green;
 	padding:50px 5% 20px 5%;	
+	background-color:white;
 }
 #logoSOS{
 	text-align:center;
@@ -89,14 +97,25 @@ header h1{
 }
 #traitSeparateur{
 	width:70%;
-	height:5px;
+	height:3px;
 	margin:30px 0 30px 15%;
-	background-color:purple;
+	background-color:black;
 	border-radius:100px;
 }
 #sectionPrincipale p{
-	margin-left : 50px;
+	margin-left:50px;
+}
+.etat{
+	margin-left:40px;
+	margin-bottom:10px;
+}
+li a{
+	margin-left:10px;
+}
+.tradafaire li{
+	margin-bottom:10px;
 }
 footer{
 	background-color:red;
+	height:100px;
 }
