@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>haruhi-trad.fr — En construction</title>
+
+  <!-- Empêche l'indexation pendant les travaux -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    :root { --maxw: 720px; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      display: grid; place-items: center;
+      background: #0f172a; color: #e2e8f0;
+    }
+    .card {
+      max-width: var(--maxw);
+      width: min(92%, var(--maxw));
+      padding: 2rem 1.5rem;
+      border-radius: 1.25rem;
+      background: rgba(30,41,59,.6);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+    h1 { margin: 0 0 .5rem; font-size: clamp(1.4rem, 3.2vw, 2rem); }
+    p { margin: .5rem 0 0; line-height: 1.6; }
+    .bar { height: .6rem; background: #1f2937; border-radius: .6rem; overflow: hidden; margin: 1.25rem 0 0; }
+    .fill { height: 100%; width: 35%; background: linear-gradient(90deg,#38bdf8,#34d399,#a78bfa); animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%{filter:brightness(.9)} 50%{filter:brightness(1.2)} 100%{filter:brightness(.9)} }
+    .row { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+    a.btn {
+      text-decoration: none; color: #0b1220; background: #e2e8f0;
+      padding: .6rem .9rem; border-radius: .8rem; font-weight: 600;
+    }
+    .muted { opacity: .75; font-size: .95rem; }
+    footer { margin-top: 1rem; font-size: .9rem; opacity: .7; }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <h1 id="title">haruhi-trad.fr</h1>
+    <p>🛠️ Le site est <strong>en cours de construction</strong>.</p>
+    <p class="muted">Revenez bientôt — on peaufine les derniers détails !</p>
+
+    <div class="bar" aria-hidden="true"><div class="fill"></div></div>
+
+    <div class="row">
+      <!-- Remplace l’e-mail et les liens ci-dessous si tu veux -->
+      <a class="btn" href="mailto:contact@haruhi-trad.fr">Me contacter</a>
+      <a class="btn" href="https://github.com/Corentin-Chartrain" rel="noopener">GitHub</a>
+    </div>
+
+    <footer>© <span id="year"></span> haruhi-trad.fr — Tous droits réservés</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
