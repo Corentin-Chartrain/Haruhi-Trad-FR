@@ -1,121 +1,74 @@
-/*--------------------------------------------DEBUT RESET CSS-------------------------------------------------*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-/*
-ol, ul {
-	list-style: none;
-}*/
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/*--------------------------------------------FIN RESET CSS-------------------------------------------------*/
-@font-face {
-  font-family: 'ProximaNova';
-  src: url('fonts/proximanova_regular.ttf') format('ttf');
-}
+:root{
+      --bg: #0b1020;       
+      --fg: #e6eaf2;        
+      --muted:#9aa3b2;
+      --card:#131a2f;   
+      --brand:#2563eb;      
+      --accent:#15c;      
+      --ok:#22c55e;        
+      --warn:#f59e0b;      
+      --maxw: 980px;
+      --radius: 18px;
+      color-scheme: dark light;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --fg:#0c1320; --muted:#5b6575; --card:#ffffff;
+        --brand:#1f4fd7; --accent:#1240d4;
+      }
+    }
 
-h1,h2,h3,p {
-	font-family: 'ProximaNova', sans-serif;
-}
-h1,h2,h3{
-	font-weight:bold;
-}
-h2{
-	margin-top:20px;
-	margin-bottom:15px;
-	font-size:20px;
-}
-h3{
-	margin:10px 0;
-}
-header{
-	background-color:blue;
-	height:70px;
-}
-header a{
-	float:right;
-}
-header a img{
-	height:50px;
-	margin:10px 10px;
-}
-header h1{
-	float:left;
-	font-size:30px;
-	margin-top:15px;
-	margin-left:20px;
-}
-body{
-	background-color:#f3f3f3;
-}
-#sectionPrincipale{
-	width:60%;
-	margin-left:15%;
-	padding:50px 5% 20px 5%;	
-	background-color:white;
-}
-#logoSOS{
-	text-align:center;
-}
-#logoSOS img{
-	width:30%;
-}
-#traitSeparateur{
-	width:70%;
-	height:3px;
-	margin:30px 0 30px 15%;
-	background-color:black;
-	border-radius:100px;
-}
-#sectionPrincipale p{
-	margin-left:50px;
-}
-.etat{
-	margin-left:40px;
-	margin-bottom:10px;
-}
-li a{
-	margin-left:10px;
-}
-.tradafaire li{
-	margin-bottom:10px;
-}
-footer{
-	background-color:red;
-	height:100px;
-}
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg); color:var(--fg); line-height:1.7;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .topbar{
+      position:sticky; top:0; z-index:5;
+      background:rgba(12,19,32,.7); backdrop-filter:saturate(150%) blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:14px 18px; display:flex; align-items:center; gap:14px}
+    .brand{font-weight:800; letter-spacing:.2px}
+    .grow{flex:1}
+    .btn, .chip{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.55rem .9rem; border-radius:999px; font-weight:600; text-decoration:none;
+    }
+    .btn{ background:var(--brand); color:white; border:0 }
+    .btn:hover{ filter:brightness(1.05) }
+    .chip{ background:rgba(255,255,255,.08); color:var(--fg) }
+
+    .hero{max-width:var(--maxw); margin:28px auto 16px; padding:0 18px; text-align:center}
+    .hero img{ width:min(260px, 60vw); height:auto; display:block; margin:14px auto 6px }
+    h1{margin:.2rem 0 0; font-size:clamp(1.4rem, 2.8vw, 2rem)}
+    p.lead{margin:.3rem auto 0; color:var(--muted)}
+
+    .grid{max-width:var(--maxw); margin:22px auto; padding:0 18px; display:grid; gap:16px}
+    @media(min-width:880px){ .grid{ grid-template-columns: 1fr 1fr } }
+
+    .card{
+      background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius); padding:18px 18px 14px; box-shadow: 0 10px 26px rgba(0,0,0,.15);
+    }
+    .card h2{margin:.2rem 0 4px; font-size:1.05rem}
+    .muted{color:var(--muted)}
+    ul{margin:.2rem 0 .6rem 1.2rem}
+
+    .progress{height:.7rem; background:rgba(255,255,255,.09); border-radius:999px; overflow:hidden}
+    .bar{height:100%; width:0}
+    .ok{ background:linear-gradient(90deg, var(--ok), #38bdf8) }
+    .warn{ background:linear-gradient(90deg, var(--warn), #f97316) }
+
+    .actions{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.8rem}
+    .outline{
+      border:1px solid rgba(255,255,255,.25); background:transparent; color:var(--fg)
+    }
+    .outline:hover{ background:rgba(255,255,255,.06) }
+
+    footer{max-width:var(--maxw); margin:22px auto 40px; padding:0 18px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
+    .tiny{font-size:.92rem}
