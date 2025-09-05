@@ -46,7 +46,7 @@
     .hero{max-width:var(--maxw); margin:28px auto 16px; padding:0 18px; text-align:center}
     .hero img{ width:min(260px, 60vw); height:auto; display:block; margin:14px auto 6px }
     h1{margin:.2rem 0 0; font-size:clamp(1.4rem, 2.8vw, 2rem)}
-    p.lead{margin:.3rem auto 0; color:var(--muted)}
+    p.lead{margin:.3rem auto 15px; color:var(--muted)}
 
     .grid{max-width:var(--maxw); margin:22px auto; padding:0 18px; display:grid; gap:16px}
     @media(min-width:880px){ .grid{ grid-template-columns: 1fr 1fr } }
@@ -72,6 +72,7 @@
 
     footer{max-width:var(--maxw); margin:22px auto 40px; padding:0 18px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
     .tiny{font-size:.92rem}
+
 
 
 
