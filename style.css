@@ -41,7 +41,7 @@
     }
     .btn{ background:var(--brand); color:white; border:0 }
     .btn:hover{ filter:brightness(1.05) }
-    .chip{ background:rgba(255,255,255,.08); color:var(--fg) }
+    /*.chip{ background:rgba(255,255,255,.08); color:var(--fg) }*/
 
     .hero{max-width:var(--maxw); margin:28px auto 16px; padding:0 18px; text-align:center}
     .hero img{ width:min(260px, 60vw); height:auto; display:block; margin:14px auto 6px }
@@ -72,6 +72,7 @@
 
     footer{max-width:var(--maxw); margin:22px auto 40px; padding:0 18px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
     .tiny{font-size:.92rem}
+
 
 
 
