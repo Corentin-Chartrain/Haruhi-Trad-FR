@@ -1,20 +1,14 @@
 :root{
-      --bg: #0b1020;       
-      --fg: #e6eaf2;        
-      --muted:#9aa3b2;
-      --card:#131a2f;   
-      --brand:#2563eb;      
-      --accent:#15c;      
+      --bg:#f6f7fb; 
+      --fg:#0c1320; 
+      --muted:#5b6575; 
+      --card:#ffffff;
+      --brand:#1f4fd7; 
+      --accent:#1240d4;  
       --ok:#22c55e;        
       --warn:#f59e0b;      
       --maxw: 980px;
       --radius: 18px;
-      color-scheme: dark light;
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f6f7fb; --fg:#0c1320; --muted:#5b6575; --card:#ffffff;
-        --brand:#1f4fd7; --accent:#1240d4;
       }
     }
 
@@ -41,7 +35,6 @@
     }
     .btn{ background:var(--brand); color:white; border:0 }
     .btn:hover{ filter:brightness(1.05) }
-    /*.chip{ background:rgba(255,255,255,.08); color:var(--fg) }*/
 
     .hero{max-width:var(--maxw); margin:28px auto 16px; padding:0 18px; text-align:center}
     .hero img{ width:min(260px, 60vw); height:auto; display:block; margin:14px auto 6px }
@@ -73,6 +66,7 @@
 
     footer{max-width:var(--maxw); margin:22px auto 40px; padding:0 18px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
     .tiny{font-size:.92rem}
+
 
 
 
