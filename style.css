@@ -9,7 +9,7 @@
       --warn:#f59e0b;      
       --maxw: 980px;
       --radius: 18px;
-      --tile-size: 10px; 
+      --tile-size: 20px; 
       --tile-opacity: 0.08;
       }
     }
@@ -18,13 +18,15 @@
     html,body{margin:0; padding:0}
     body{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-          
       background:var(--bg); color:var(--fg); line-height:1.7; 
+          
       background-image:linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.02)), url("/images/Sos-brigade.png"); 
       background-repeat: repeat;
       background-size: var(--tile-size);
       background-position: center;
       background-attachment: fixed;
+      background-origin: content-box;
+      padding: 40px; 
     }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
@@ -74,6 +76,7 @@
 
     footer{max-width:var(--maxw); margin:22px auto 40px; padding:0 18px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
     .tiny{font-size:.92rem}
+
 
 
 
