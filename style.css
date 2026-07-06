@@ -23,6 +23,10 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
+    .corps
+    {
+      background-color:white;    
+    }
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
 
