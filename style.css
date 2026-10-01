@@ -116,3 +116,5 @@
     footer{max-width:var(--maxw); margin:0px auto; padding:22px 18px 40px; color:var(--muted); gap:12px; text-align:center; justify-content:space-between; flex-wrap:wrap}
     .tiny{font-size:.92rem}
 
+    footer img{width:30%; text-align:center;}
+
